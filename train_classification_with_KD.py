@@ -68,7 +68,7 @@ parser.add_argument('--image_size', default=256, type=int)
 
 parser.add_argument('--print_ratio', default=0.1, type=float)
 
-parser.add_argument('--tag', default='WHU_KD', type=str)
+parser.add_argument('--tag', default='WHU_KD_T_minus_S_cat', type=str)
 
 
 

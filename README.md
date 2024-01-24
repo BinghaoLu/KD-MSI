@@ -47,16 +47,16 @@ CUDA_VISIBLE_DEVICES=0 python multi_scale_sigmoid_inference.py --data_dir $your_
 
 ### 3. Evaluate change probability map with different background threshold
 ```bash
-python3 evaluate.py --list_file train.txt --predict_folder $predict_folder --mode npy --gt_dir $gt_dir
+python3 evaluate.py --list_file train.txt --predict_folder $predict_folder --mode npy --data_dir $your_dir
 ```
 
 ### 4. Generate pseudo masks with the optimal background threshold
 ```bash
-python3 make_pseudo_labels.py --data_dir $your_dir --experiment_name WHU_KD_T_minus_S_cat@train@scale=1.0,1.25,1.5 --domain train --threshold 0.65
+python3 make_pseudo_labels.py --data_dir $your_dir --experiment_name WHU_KD_T_minus_S_cat@train@scale=0.5,1.0,1.25,2.0 --domain train --threshold 0.3
 ```
 ### 5. Train change detection model with pseudo labels
 ```bash
-python3 train_change_detection.py --data_dir $your_dir --tag WHU_weakly_change_detection --label_name WHU_KD_T_minus_S_cat@train@scale=1.0,1.25,1.5@crf=0@255@threshold0.65
+python3 train_change_detection.py --data_dir $your_dir --tag WHU_weakly_change_detection --label_name WHU_KD_T_minus_S_cat@train@scale=0.5,1.0,1.25,2.0@crf=0@255@threshold0.3
 ```
 
 ### 6. Inference change detection
