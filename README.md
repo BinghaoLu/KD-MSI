@@ -40,7 +40,7 @@ Change detection data set with pixel-level binary labels；
 CUDA_VISIBLE_DEVICES=0 python train_classification_with_KD.py --data_dir $your_dir --tag WHU_KD_T_minus_S_cat --teacher minus --student abs
 ```
 
-### 2. Apply Multi-scale Sigmoid Inference to refine SCAM
+### 2. Apply Multi-scale Sigmoid Inference to refine Change Probability Map
 ```bash
 CUDA_VISIBLE_DEVICES=0 python multi_scale_sigmoid_inference.py --data_dir $your_dir --tag WHU_KD_T_minus_S_cat --student_combination minus --scales 0.5,1.0,1.25,2.0
 ```
