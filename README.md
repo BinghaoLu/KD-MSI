@@ -45,7 +45,7 @@ CUDA_VISIBLE_DEVICES=0 python train_classification_with_KD.py --data_dir $your_d
 CUDA_VISIBLE_DEVICES=0 python multi_scale_sigmoid_inference.py --data_dir $your_dir --tag WHU_KD_T_minus_S_cat --student_combination minus --scales 0.5,1.0,1.25,2.0
 ```
 
-### 3. Evaluate change probability map with different background threshold
+### 3. Evaluate Change Probability Map with different background threshold
 ```bash
 python3 evaluate.py --list_file train.txt --predict_folder $predict_folder --mode npy --data_dir $your_dir
 ```
