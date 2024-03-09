@@ -1,7 +1,6 @@
 # KD-MSI in pytorch
 
-Weakly Supervised Change Detection via Knowledge Distillation and Multiscale Sigmoid Inference
-Implementation of "Background-Mixed Augmentation for Weakly Supervised Change Detection" in PyTorch.
+Implementation of "Weakly Supervised Change Detection via Knowledge Distillation and Multiscale Sigmoid Inference" in PyTorch.
 
 ## Prerequisite
 ```
